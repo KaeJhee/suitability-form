@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-deep: #0a0a0f;
+  --bg-card: #12121a;
+  --border: #252535;
+  --accent: #6366f1;
+  --gold: #d4af37;
+}
+
+html, body {
+  background: var(--bg-deep);
+  color: #e5e7eb;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Inter, sans-serif;
+  min-height: 100vh;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: #0a0a0f; }
+::-webkit-scrollbar-thumb { background: #252535; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #6366f1; }
+
+/* Form input baseline */
+.input-base {
+  @apply w-full px-4 py-3 rounded-lg bg-ghost-800 border border-ghost-700 
+         text-gray-100 placeholder-gray-500 focus:outline-none 
+         focus:border-ghost-accent focus:ring-1 focus:ring-ghost-accent
+         transition-colors;
+}
+
+.label-base {
+  @apply block text-sm font-medium text-gray-300 mb-2;
+}
+
+.btn-primary {
+  @apply px-6 py-3 rounded-lg bg-ghost-accent text-white font-semibold
+         hover:bg-indigo-500 transition-colors disabled:opacity-50
+         disabled:cursor-not-allowed;
+}
+
+.btn-secondary {
+  @apply px-6 py-3 rounded-lg bg-ghost-800 border border-ghost-700 
+         text-gray-200 font-medium hover:bg-ghost-700 transition-colors;
+}
+
+/* Bubble glow effect */
+.bubble-glow {
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.4),
+              inset 0 0 20px rgba(99, 102, 241, 0.1);
+}
